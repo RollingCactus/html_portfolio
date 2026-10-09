@@ -1,0 +1,28 @@
+    :root {
+        --primary-bg: #EBFEFF;
+        --primary-text: #296600;
+        --standard-gap: 40px;
+    }
+    
+    body {
+        font-family: 'Lucida Sans';
+        background: var(--primary-bg);
+        color: var(--primary-text)
+    }
+    
+    #project article {
+        background: #D9F4CD;
+        margin: 40px;
+    }
+
+    nav {
+        background: #D9F4CD
+    }
+
+    .wayfinder{
+        background: #D9F4CD
+    }
+
+    #menu {
+        background: #D9F4CD
+    }
