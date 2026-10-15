@@ -1,6 +1,7 @@
     :root {
         --primary-bg: #EBFEFF;
         --primary-text: #296600;
+        --secondary-text: #215200;
         --standard-gap: 40px;
     }
     
@@ -9,13 +10,21 @@
         background: var(--primary-bg);
         color: var(--primary-text)
     }
+
+    #about {
+        font-family: 'Lucida Sans Regular';
+        background: #D9F4CD;
+        margin: 40px;
+    }
     
     #project article {
+        font-family: 'Lucida Sans Regular';
         background: #D9F4CD;
         margin: 40px;
     }
 
     nav {
+        font-family: 'Lucida Sans Regular';
         background: #D9F4CD
     }
 
@@ -24,5 +33,12 @@
     }
 
     #menu {
+        font-family: 'Lucida Sans Regular';        
+        background: #CBF6ED
+
+    }
+    
+    #contact {
+        font-family: 'Lucida Sans Regular';
         background: #D9F4CD
     }
