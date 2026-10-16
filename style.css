@@ -1,44 +1,75 @@
-    :root {
-        --primary-bg: #EBFEFF;
-        --primary-text: #296600;
-        --secondary-text: #215200;
-        --standard-gap: 40px;
-    }
-    
-    body {
-        font-family: 'Lucida Sans';
-        background: var(--primary-bg);
-        color: var(--primary-text)
-    }
+:root {
+    --primary-bg: #EBFEFF;
+    --primary-text: #296600;
+    --secondary-text: #215200;
+    --standard-gap: 40px;
+}
 
-    #about {
-        font-family: 'Lucida Sans Regular';
-        background: #D9F4CD;
-        margin: 40px;
-    }
-    
-    #project article {
-        font-family: 'Lucida Sans Regular';
-        background: #D9F4CD;
-        margin: 40px;
-    }
+body {
+    font-family: 'Lucida Sans';
+    background: var(--primary-bg);
+    color: var(--primary-text);
+    text-align: center;
+}
+/* Look at the segments of this css code. What would you have to do center the text in each of these modules within the center of each grid module */
+#about {
+    font-family: 'Lucida Sans Regular';
+    background: #D9F4CD;
+    margin: 40px;
+    border-radius: 15px;
+}
 
-    nav {
-        font-family: 'Lucida Sans Regular';
-        background: #D9F4CD
-    }
+#project article {
+    font-family: 'Lucida Sans Regular';
+    background: #D9F4CD;
+    margin: 40px;
+    border-radius: 15px;
+}
 
-    .wayfinder{
-        background: #D9F4CD
-    }
+nav {
+    font-family: 'Lucida Sans Regular';
+    background: #D9F4CD;
+    border-radius: 15px;
+}
 
-    #menu {
-        font-family: 'Lucida Sans Regular';        
-        background: #CBF6ED
+.wayfinder {
+    background: #D9F4CD;
+    border-radius: 15px;
+}
 
-    }
-    
-    #contact {
-        font-family: 'Lucida Sans Regular';
-        background: #D9F4CD
-    }
+#menu {
+    font-family: 'Lucida Sans Regular';
+    background: #CBF6ED;
+    border-radius: 15px;
+}
+
+#contact {
+    font-family: 'Lucida Sans Regular';
+    background: #D9F4CD;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Creates a two-column grid layout for the main content */
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background: rgba(235, 254, 255);
+}
+
+/* Centers the content horizontally and vertically within each grid module */
+.module {
+    background: rgba(235, 254, 255);
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+/* Makes module one span from row 1 to row 4 in the first column */
+.module.one {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
