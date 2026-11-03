@@ -11,12 +11,45 @@ body {
     color: var(--primary-text);
     text-align: center;
 }
-/* Look at the segments of this css code. What would you have to do center the text in each of these modules within the center of each grid module */
+
+
+a {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+}
+
+nav a,
+#menu a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
+#contact a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
 #about {
     font-family: 'Lucida Sans Regular';
     background: #D9F4CD;
     margin: 40px;
     border-radius: 15px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 20px;
 }
 
 #project article {
@@ -24,6 +57,10 @@ body {
     background: #D9F4CD;
     margin: 40px;
     border-radius: 15px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 20px;
 }
 
 nav {
@@ -46,11 +83,15 @@ nav {
 #contact {
     font-family: 'Lucida Sans Regular';
     background: #D9F4CD;
+    margin: 40px;
     border-radius: 15px;
+    display: grid;
+    place-items: center;
     text-align: center;
+    padding: 20px;
 }
 
-/* Creates a two-column grid layout for the main content */
+
 main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -58,7 +99,7 @@ main {
     background: rgba(235, 254, 255);
 }
 
-/* Centers the content horizontally and vertically within each grid module */
+
 .module {
     background: rgba(235, 254, 255);
     display: grid;
@@ -66,7 +107,7 @@ main {
     text-align: center;
 }
 
-/* Makes module one span from row 1 to row 4 in the first column */
+
 .module.one {
     grid-column-start: 1;
     grid-column-end: 2;
