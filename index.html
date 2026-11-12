@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Andrew Drotar</title>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
 </head>
 <body>
     <header>
@@ -15,9 +16,12 @@
                 <li><a href="#contact">Contact</a></li>                               
             </ul>
         </nav>
+        <!-- Dark mode toggle button -->
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
     </header>
     <main>
-        <img src="TRUESTLOGO.png" alt="The Truest Logo" width="200" height="200"> 
+        <img src="TRUERESTLOGO.png" alt="The Truest Logo" width="200" height="200"> 
+
         <section>
             <h1>Andrew is a designer and a student based in Michigan</h1>
         </section>
@@ -46,5 +50,29 @@
             </address>
         </section>
     </main>
+
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        // Check for saved preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            html.setAttribute('data-theme', savedTheme);
+            updateIcon(savedTheme);
+        }
+
+        toggleButton.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateIcon(next);
+        });
+
+        function updateIcon(theme) {
+            toggleButton.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+    </script>
 </body>
 </html>

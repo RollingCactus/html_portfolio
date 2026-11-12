@@ -1,8 +1,21 @@
 :root {
+    /* Light mode (default) */
     --primary-bg: #EBFEFF;
     --primary-text: #296600;
     --secondary-text: #215200;
+    --object-background: #D9F4CD;
+    --menu: #CBF6ED;
+
     --standard-gap: 40px;
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] {
+    --primary-bg: #002729;
+    --primary-text: #1C9C80;
+    --secondary-text: #7BD14D;
+    --object-background: #1E430F;
+    --menu: #0C4539;
 }
 
 body {
@@ -11,7 +24,6 @@ body {
     color: var(--primary-text);
     text-align: center;
 }
-
 
 a {
     min-height: 44px;
@@ -43,7 +55,7 @@ nav a,
 
 #about {
     font-family: 'Lucida Sans Regular';
-    background: #D9F4CD;
+    background: var(--object-background);
     margin: 40px;
     border-radius: 15px;
     display: grid;
@@ -54,7 +66,7 @@ nav a,
 
 #project article {
     font-family: 'Lucida Sans Regular';
-    background: #D9F4CD;
+    background: var(--object-background);
     margin: 40px;
     border-radius: 15px;
     display: grid;
@@ -65,24 +77,24 @@ nav a,
 
 nav {
     font-family: 'Lucida Sans Regular';
-    background: #D9F4CD;
+    background: var(--object-background);
     border-radius: 15px;
 }
 
 .wayfinder {
-    background: #D9F4CD;
+    background: var(--object-background);
     border-radius: 15px;
 }
 
 #menu {
     font-family: 'Lucida Sans Regular';
-    background: #CBF6ED;
+    background: var(--menu);
     border-radius: 15px;
 }
 
 #contact {
     font-family: 'Lucida Sans Regular';
-    background: #D9F4CD;
+    background: var(--object-background);
     margin: 40px;
     border-radius: 15px;
     display: grid;
@@ -91,26 +103,45 @@ nav {
     padding: 20px;
 }
 
-
 main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    background: rgba(235, 254, 255);
+    background: var(--primary-bg);
 }
 
-
 .module {
-    background: rgba(235, 254, 255);
+    background: var(--primary-bg);
     display: grid;
     place-items: center;
     text-align: center;
 }
-
 
 .module.one {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 4;
+}
+
+/* Logo Swap Styles */
+.logo-light {
+    display: block;
+}
+
+.logo-dark {
+    display: none;
+}
+
+[data-theme="dark"] .logo-light {
+    display: none;
+}
+
+[data-theme="dark"] .logo-dark {
+    display: block;
+}
+
+
+#theme-toggle:hover {
+    opacity: 0.8;
 }
